@@ -23,7 +23,7 @@ pipeline {
                 echo "this is deploy stage"
                 '''
             }
-
+        }    
         stage('my-stage') {
             steps {
                 sh '''
@@ -31,7 +31,6 @@ pipeline {
                 echo "this is my-stage"
                 '''
             }
-        }
         }
     
     }
