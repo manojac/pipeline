@@ -1,16 +1,16 @@
-pipeline {
+ pipeline {
     agent any
     stages {
         stage('build') {
             steps {
-                sh 'sleep 5; echo "this is build stage"'
+                sh 'ls -lrt ; echo "this is build stage"'
             }
 
         }
         stage('test') {
             steps {
                 sh '''
-                sleep 5
+                df -h .
                 echo "this is test stage"
                 '''
             }
@@ -19,7 +19,7 @@ pipeline {
         stage('deploy') {
             steps {
                 sh '''
-                sleep 5
+                ps -ef | grep "git"
                 echo "this is deploy stage"
                 '''
             }
@@ -27,7 +27,7 @@ pipeline {
         stage('my-stage') {
             steps {
                 sh '''
-                sleep 5
+                uname -a
                 echo "this is my-stage"
                 '''
             }
