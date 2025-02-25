@@ -3,7 +3,7 @@
     stages {
         stage('build') {
             steps {
-                sh 'ls -lrt ; echo "this is build stage"'
+                sh 'ls -lrt; echo "this is build stage"'
             }
 
         }
