@@ -7,7 +7,7 @@ pipeline {
             }
 
         }
-        stage( 'test') {
+        stage('test') {
             steps {
                 '''
                 sleep 5
@@ -16,7 +16,7 @@ pipeline {
             }
 
         }
-        stage( 'deploy') {
+        stage('deploy') {
             steps {
                 '''
                 sleep 5
@@ -24,7 +24,7 @@ pipeline {
                 '''
             }
 
-        stage( 'my-stage') {
+        stage('my-stage') {
             steps {
                 '''
                 sleep 5
