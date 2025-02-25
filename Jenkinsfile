@@ -9,7 +9,7 @@ pipeline {
         }
         stage('test') {
             steps {
-                '''
+                sh '''
                 sleep 5
                 echo "this is test stage"
                 '''
@@ -18,7 +18,7 @@ pipeline {
         }
         stage('deploy') {
             steps {
-                '''
+                sh '''
                 sleep 5
                 echo "this is deploy stage"
                 '''
@@ -26,7 +26,7 @@ pipeline {
 
         stage('my-stage') {
             steps {
-                '''
+                sh '''
                 sleep 5
                 echo "this is my-stage"
                 '''
