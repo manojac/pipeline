@@ -1,7 +1,8 @@
  pipeline {
-    agent any
+    agent none
     stages {
-        stage('build') {
+     agent ('label node-1')   
+     stage('build') {
             steps {
                 sh 'ls -lrt ; echo "this is build stage"'
             }
