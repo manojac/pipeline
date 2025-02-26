@@ -3,7 +3,7 @@
     stages {
         stage('build') {
             steps {
-                sh 'ls -lrt; echo "this is build stage"'
+                sh 'ls -lrt ; echo "this is build stage"'
             }
 
         }
@@ -32,6 +32,15 @@
                 '''
             }
         }
+        stage('new-stage') {
+            steps {
+                sh '''
+                hostname -i
+                echo "this is new-stage"
+                '''
+            }
+        }
     
     }
 }
+
